@@ -27,6 +27,34 @@ The screenshot above is of a JUnite test written for the method ```averageWithou
 ![Image](Screen Shot 2023-04-24 at 10.30.56 PM.png)
 The screenshot above is of the code after it was fixed.
 
+***Before:***
+  static double averageWithoutLowest(double[] arr) {
+
+    if(arr.length < 2) { return 0.0; }
+      
+    double lowest = arr[0];
+      
+    for(double num: arr) {
+      
+    if(num < lowest) { lowest = num; }
+   
+    }
+    
+    double sum = 0;
+    
+    for(double num: arr) {
+    
+      if(num != lowest) { sum += num; }
+      
+      index += 1;
+    
+    }
+    
+    return sum / (arr.length - 1);
+  
+  }
+
+***After:***
   static double averageWithoutLowest(double[] arr) {
 
     if(arr.length < 2) { return 0.0; }
