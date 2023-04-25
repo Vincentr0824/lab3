@@ -86,3 +86,7 @@ The screenshot above is of the code after it was fixed.
   }
   
 The fix was adding ```int index = 0;``` to keep track of the index to make sure the initial lowest number isn't added again if all the numbers are the same. It is used in the also added line ```if( index != 0 && num == lowest) { sum += num; }``` which makes sure that if all the numbers are the same, then it will still add the other numbers, but not the first index, as it would be considered the lowest. 
+
+Part 3
+
+Something that I have learned from these past 2 labs is how to set up a server in order to view my code through a website format. It is very interesting to me and I didn't know it was possible to simply set up a local server using VS Code. I thought the process would be a lot more complicated, and in a way ti really is as we were not the ones who wrote the Server.java file which actually does look a little complicated, but this is at least a step toward the right direction. 
