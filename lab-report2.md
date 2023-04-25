@@ -27,7 +27,7 @@ The screenshot above is of a JUnite test written for the method ```averageWithou
 ![Image](Screen Shot 2023-04-24 at 10.30.56 PM.png)
 The screenshot above is of the code after it was fixed.
 
-  ```static double averageWithoutLowest(double[] arr) {```
+  static double averageWithoutLowest(double[] arr) {
 
     if(arr.length < 2) { return 0.0; }
       
@@ -55,4 +55,4 @@ The screenshot above is of the code after it was fixed.
     
     return sum / (arr.length - 1);
   
-  ```}```
+  }
