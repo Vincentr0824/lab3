@@ -25,19 +25,19 @@ The screenshot above is of the ```averageWithoutLowest``` method. It can be seen
 The screenshot above is of a JUnite test written for the method ```averageWithoutLowest```. It is an input that doesn't induce a failure. Once again, the symptom of only the previously mentioned test failing can be seen at the bottom of the screenshot. The test using ```double[] test = {1.0, 2.0, 3.0, 4.0}``` is part of the 8 tests which were run, but didn't fail. 
 
 ![Image](Screen Shot 2023-04-24 at 10.30.56 PM.png)
-The screenshot above is of the code after it was fixed. 
-```  static double averageWithoutLowest(double[] arr) {
-    if(arr.length < 2) { return 0.0; }
-    double lowest = arr[0];
-    for(double num: arr) {
-      if(num < lowest) { lowest = num; }
-    }
-    double sum = 0;
-    int index = 0;
-    for(double num: arr) {
-      if( index != 0 && num == lowest) { sum += num; }
-      if(num != lowest) { sum += num; }
-      index += 1;
-    }
-    return sum / (arr.length - 1);
-  }```
+The screenshot above is of the code after it was fixed. <br>
+```  static double averageWithoutLowest(double[] arr) {<br>
+    if(arr.length < 2) { return 0.0; }<br>
+    double lowest = arr[0];<br>
+    for(double num: arr) {<br>
+      if(num < lowest) { lowest = num; }<br>
+    }<br>
+    double sum = 0;<br>
+    int index = 0;<br>
+    for(double num: arr) {<br>
+      if( index != 0 && num == lowest) { sum += num; }<br>
+      if(num != lowest) { sum += num; }<br>
+      index += 1;<br>
+    }<br>
+    return sum / (arr.length - 1);<br>
+  }<br>```
