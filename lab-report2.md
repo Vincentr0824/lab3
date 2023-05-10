@@ -56,6 +56,7 @@ The screenshot/code above is of a JUnit test written for the method ```averageWi
 The screenshot above is of the code after it was fixed.
 
 ***Before:***
+```
   static double averageWithoutLowest(double[] arr) {
 
     if(arr.length < 2) { return 0.0; }
@@ -81,8 +82,9 @@ The screenshot above is of the code after it was fixed.
     return sum / (arr.length - 1);
   
   }
-
+   ```
 ***After:***
+```
   static double averageWithoutLowest(double[] arr) {
 
     if(arr.length < 2) { return 0.0; }
@@ -112,7 +114,7 @@ The screenshot above is of the code after it was fixed.
     return sum / (arr.length - 1);
   
   }
-  
+   ```
 The fix was adding ```int index = 0;``` to keep track of the index to make sure the initial lowest number isn't added again if all the numbers are the same. It is used in the also added line ```if( index != 0 && num == lowest) { sum += num; }``` which makes sure that if all the numbers are the same, then it will still add the other numbers, but not the first index, as it would be considered the lowest. 
 
 Part 3
