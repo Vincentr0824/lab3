@@ -16,7 +16,9 @@ This is the second screenshot of using "/add-message" in the URL. No methods are
 Part 2
 
 ![Image](Screen Shot 2023-04-24 at 9.57.56 PM.png)
-```@Test
+   
+```
+   @Test
    
    public void testAverageWithoutLowest4() {
    
@@ -26,7 +28,9 @@ Part 2
    
      assertEquals(true, result);
    
-   }```
+   }
+   ```
+   
 The screenshot above is of a JUnit test written for the method ```averageWithoutLowest```. It is a failure inducing input, because the code ignores the lowest number, however, every number in this test is equal to each other. The symptom of using the input ```double[] test = {1.0, 1.0, 1.0}``` can be seen at the bottom of the screenshot, through the 1 failed test. 
 
 ![Image](Screen Shot 2023-04-24 at 9.58.35 PM.png)
