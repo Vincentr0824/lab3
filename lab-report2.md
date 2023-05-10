@@ -31,12 +31,25 @@ Part 2
    }
    ```
    
-The screenshot above is of a JUnit test written for the method ```averageWithoutLowest```. It is a failure inducing input, because the code ignores the lowest number, however, every number in this test is equal to each other. The symptom of using the input ```double[] test = {1.0, 1.0, 1.0}``` can be seen at the bottom of the screenshot, through the 1 failed test. 
+The screenshot/code above is of a JUnit test written for the method ```averageWithoutLowest```. It is a failure inducing input, because the code ignores the lowest number, however, every number in this test is equal to each other. The symptom of using the input ```double[] test = {1.0, 1.0, 1.0}``` can be seen at the bottom of the screenshot, through the 1 failed test. 
 
 ![Image](Screen Shot 2023-04-24 at 9.58.35 PM.png)
 The screenshot above is of the ```averageWithoutLowest``` method. It can be seen that it simply does nothing if the number is equal to the lowest, which is where our problem originates.
 
 ![Image](Screen Shot 2023-04-24 at 10.06.19 PM.png)
+```
+  @Test
+   
+  public void testAverageWithoutLowest() {
+   
+    double[] test = {1.0, 2.0, 3.0, 4.0};
+   
+    boolean result = 3.0 == ArrayExamples.averageWithoutLowest(test);
+   
+    assertEquals(true, result);
+   
+  }
+   ```
 The screenshot/code above is of a JUnit test written for the method ```averageWithoutLowest```. It is an input that doesn't induce a failure. Once again, the symptom of only the previously mentioned test failing can be seen at the bottom of the screenshot. The test using ```double[] test = {1.0, 2.0, 3.0, 4.0}``` is part of the 8 tests which were run, but didn't fail. 
 
 ![Image](Screen Shot 2023-04-24 at 10.30.56 PM.png)
