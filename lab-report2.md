@@ -17,10 +17,15 @@ Part 2
 
 ![Image](Screen Shot 2023-04-24 at 9.57.56 PM.png)
 ```@Test
+   
    public void testAverageWithoutLowest4() {
+   
      double[] test = {1.0, 1.0, 1.0};
+   
      boolean result = 1.0 == ArrayExamples.averageWithoutLowest(test);
+   
      assertEquals(true, result);
+   
    }```
 The screenshot above is of a JUnit test written for the method ```averageWithoutLowest```. It is a failure inducing input, because the code ignores the lowest number, however, every number in this test is equal to each other. The symptom of using the input ```double[] test = {1.0, 1.0, 1.0}``` can be seen at the bottom of the screenshot, through the 1 failed test. 
 
